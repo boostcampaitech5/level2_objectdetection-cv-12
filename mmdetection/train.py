@@ -1,5 +1,5 @@
 # 모듈 import
-
+import wandb
 from mmcv import Config
 from mmdet.datasets import build_dataset
 from mmdet.models import build_detector
@@ -29,6 +29,20 @@ args = parse_arguments()
 # cfg = Config.fromfile('./configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py')
 cfg = Config.fromfile(args.config_dir)
 
+# wandb
+wandb.init(project = 'waste_detection', name = 'exp')
+cfg.log_config.hooks = [
+        dict(type='TextLoggerHook'),
+        dict(type='MMDetWandbHook',
+             init_kwargs = {'project' : 'waste_detection'},
+         interval=10,
+         log_checkpoint=True,
+         log_checkpoint_metadata=True,
+         num_eval_images=100
+        )
+        # dict(type='TensorboardLoggerHook')
+]
+
 root='../../dataset/'
 
 # dataset config 수정
@@ -48,7 +62,6 @@ cfg.seed = 2022
 cfg.gpu_ids = [0]
 
 cfg.work_dir = f"./work_dirs/{args.config_dir.split('/')[-1][:-3]}"
-
 
 cfg.model.roi_head.bbox_head.num_classes = 10
 
