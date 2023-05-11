@@ -35,13 +35,13 @@ root='/opt/ml/dataset/'
 # dataset.py 수정
 cfg.data.train.classes = classes
 cfg.data.train.img_prefix = root
-cfg.data.train.ann_file = root + 'train_data_fold_0_seed_411.json' # train json 정보
+cfg.data.train.ann_file = root + 'train_data_fold_3_411.json' # train json 정보
 cfg.data.train.pipeline[2]['img_scale'] = (512, 512) # Resize
 
 # dataset.py 수정
 cfg.data.val.classes = classes
 cfg.data.val.img_prefix = root
-cfg.data.val.ann_file = root + 'val_data_fold_0_seed_411.json' # valid json 정보
+cfg.data.val.ann_file = root + 'val_data_fold_3_411.json' # valid json 정보
 cfg.data.val.pipeline[1]['img_scale'] = (512, 512) # Resize
 
 cfg.data.test.classes = classes
@@ -73,7 +73,7 @@ cfg.log_config.hooks.append(
                                  interval=50,
                                 init_kwargs=dict(
                                        project = 'waste_detection',
-                                       name = f'dh){cfg_name}',
+                                       name = f'sw){cfg_name}',
                                    )))
 
 meta = dict()
