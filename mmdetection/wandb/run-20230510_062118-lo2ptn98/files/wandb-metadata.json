@@ -1,0 +1,85 @@
+{
+    "os": "Linux-4.4.0-59-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.16",
+    "heartbeatAt": "2023-05-10T06:21:19.383979",
+    "startedAt": "2023-05-10T06:21:18.669670",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train_guenk.py",
+    "codePath": "mmdetection/train_guenk.py",
+    "git": {
+        "remote": "https://github.com/boostcampaitech5/level2_objectdetection-cv-12.git",
+        "commit": "8566ec8354bcbb82397ccdd9b2965f02aa53c51f"
+    },
+    "email": "rlaehghks5@gmail.com",
+    "root": "/opt/ml/level2_objectdetection-cv-12",
+    "host": "ff96b59d8ac3",
+    "username": "root",
+    "executable": "/opt/conda/envs/detection/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2199.998,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 98.30496215820312,
+        "used": 22.691532135009766
+    },
+    "gpu": "Tesla V100-PCIE-32GB",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Tesla V100-PCIE-32GB",
+            "memory_total": 34089730048
+        }
+    ],
+    "memory": {
+        "total": 88.50595092773438
+    }
+}
