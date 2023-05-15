@@ -549,7 +549,7 @@ class CocoDataset(CustomDataset):
                         # area range index 0: all area ranges
                         # max dets index -1: typically 100 per image
                         nm = self.coco.loadCats(catId)[0]
-                        precision = precisions[:, :, idx, 0, -1]
+                        precision = precisions[0, :, idx, 0, 0] 
                         precision = precision[precision > -1]
                         if precision.size:
                             ap = np.mean(precision)
@@ -561,7 +561,7 @@ class CocoDataset(CustomDataset):
                     num_columns = min(6, len(results_per_category) * 2)
                     results_flatten = list(
                         itertools.chain(*results_per_category))
-                    headers = ['category', 'AP'] * (num_columns // 2)
+                    headers = ['category', 'mAP50'] * (num_columns // 2)
                     results_2d = itertools.zip_longest(*[
                         results_flatten[i::num_columns]
                         for i in range(num_columns)
