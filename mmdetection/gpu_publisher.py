@@ -9,9 +9,9 @@ CONFIG_END_PATH = 'configs/config_end/'
 
 # Redis 데이터베이스 연결 정보
 config = {
-    'host': '127.0.0.1',
-    'port': 6379
-    # 'password': 'redis_password'
+    'host': '49.50.173.166',
+    'port': 30003,
+    'password': 'foobared'
 }
 
 # Redis 클라이언트 생성
@@ -46,25 +46,3 @@ while True:
 
 
 
-
-# r.publish('gpu_task_queue', json.dumps(train_config))
-
-
-
-
-# # 작업 큐에 config 파일 추가
-# r.lpush('work_queue', json.dumps(train_config))
-
-
-
-######################################################################
-# # GPU 작업 생성 및 전송 함수
-# def send_task(task):
-#     # GPU 작업 전송
-#     r.publish('gpu_task_queue', task)
-#     print(f"Task {task} sent")
-
-# # GPU 작업 생성 및 전송
-# for i in range(10):
-#     task = f"Task_{i}"
-#     send_task(task)
