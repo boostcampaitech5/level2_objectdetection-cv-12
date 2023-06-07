@@ -22,8 +22,11 @@
 1. RedisDB를 통한 GPU 관리
     - work queue 기능을 사용하여 GPU utilization 향상
     - 7.194 days * 5 people 사용량 달성
-2. EDA를 통해 학습데이터 분석
+2. EDA를 통해 학습데이터 분석 및 Preprocessing
     - 한 이미지에 30/40개 이상의 박스가 존재하는 경우 제거
+    - Weighted Box Fusion(WBF) 적용 (Preprocessing)
+    - 작은 크기의 bounding box 제거
+    - 작은 크기의 bounding box에 margin 추가
 3. mmdetection 구조 분석 
     - 실험에 주로 활용할 configs를 중심으로 분석
 4. Stratified K-fold를 통해 validation fold 탐색
@@ -109,3 +112,8 @@ augmentation 기반으로 Cascade R-CNN 모델에서 백본을 Swin Base, ConvNe
 - Public : 3등 -> Private : 3등
 - Public : 0.7047 -> Private : 0.6881
 
+|김도환 |                                                  서아라|성무열 |                                                  조성운|한현민|
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| [<img src="https://avatars.githubusercontent.com/u/121927513?v=4" alt="" style="width:100px;100px;">](https://github.com/rlaehghks5) <br/> | [<img src="https://avatars.githubusercontent.com/u/68554446?v=4" alt="" style="width:100px;100px;">](https://github.com/araseo) <br/> | [<img src="https://avatars.githubusercontent.com/u/62093939?v=4" alt="" style="width:100px;100px;">](https://github.com/noheat61) <br/> |[<img src="https://avatars.githubusercontent.com/u/126544082?v=4" alt="" style="width:100px;100px;">](https://github.com/nebulajo) <br/> | [<img src="https://avatars.githubusercontent.com/u/33598545?s=400&u=d0aaa9e96fd2fa1d0c1aa034d8e9e2c8daf96473&v=4" alt="" style="width:100px;100px;">](https://github.com/Hyunmin-H) <br/> |
+
+****
